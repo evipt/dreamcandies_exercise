@@ -1,4 +1,6 @@
 import csv
+
+
 if __name__ == '__main__':
 
 # Loading the sample.csv as LIST 
@@ -62,11 +64,9 @@ if __name__ == '__main__':
 		customer_info = [customer] + customers_dict[customer]
 		new_customers_list.append(', '.join(customer_info))
 
-		customer_invoice = invoice_dict[customer] #invoice = [inv code, amount, date]
+		customer_invoice = invoice_dict[customer] 
 		for detail_list in customer_invoice: 
-			# print(detail_list)
-			full_invoice = [customer] + detail_list # [cust code, inv code, amount, date]
-			# print(full_invoice)
+			full_invoice = [customer] + detail_list 
 			new_invoice_list.append(', '.join(full_invoice))
 
 		for inv_list in customer_invoice:
